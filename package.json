@@ -20,7 +20,8 @@
     "format:check": "npm run prettier -- -l",
     "clean": "rm -rf dist/*",
     "prebuild": "npm run format:check && npm run clean",
-    "release": "npm run build && npm publish --provenance --access public"
+    "release": "npm run build && npm publish --provenance --access public",
+    "generate:readme": "node .github/scripts/generate-readme-tools.mjs"
   },
   "repository": {
     "type": "git",
