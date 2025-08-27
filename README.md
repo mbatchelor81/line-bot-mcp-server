@@ -190,7 +190,7 @@ This will start the MCP Inspector interface where you can interact with the LINE
 
 ## Versioning
 
-This project respects semantic versioning
+This project respects semantic versioning.
 
 See http://semver.org/
 
