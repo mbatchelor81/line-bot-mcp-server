@@ -26,6 +26,9 @@ export default class GetProfile extends AbstractTool {
         "The user ID to get a profile. Defaults to DESTINATION_USER_ID.",
       );
 
+    // Tool descriptions for README generation
+    // en: Get detailed profile information of a LINE user including display name, profile picture URL, status message and language.
+    // ja: LINEユーザーの詳細なプロフィール情報を取得する。表示名、プロフィール画像URL、ステータスメッセージ、言語を取得できる。
     server.tool(
       "get_profile",
       "Get detailed profile information of a LINE user including display name, profile picture URL, status message and language.",

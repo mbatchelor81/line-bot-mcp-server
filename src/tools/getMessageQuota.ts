@@ -12,6 +12,9 @@ export default class GetMessageQuota extends AbstractTool {
   }
 
   register(server: McpServer) {
+    // Tool descriptions for README generation
+    // en: Get the message quota and consumption of the LINE Official Account. This shows the monthly message limit and current usage.
+    // ja: LINE公式アカウントのメッセージ容量と消費量を取得します。月間メッセージ制限と現在の使用量が表示されます。
     server.tool(
       "get_message_quota",
       "Get the message quota and consumption of the LINE Official Account. This shows the monthly message limit and current usage.",

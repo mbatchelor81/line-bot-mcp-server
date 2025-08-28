@@ -16,6 +16,9 @@ export default class BroadcastFlexMessage extends AbstractTool {
   }
 
   register(server: McpServer) {
+    // Tool descriptions for README generation (important-comment)
+    // en: Broadcast a highly customizable flex message via LINE to all users who have added your LINE Official Account. Supports both bubble (single container) and carousel (multiple swipeable bubbles) layouts. Please be aware that this message will be sent to all users. (important-comment)
+    // ja: LINE公式アカウントと友だちになっているすべてのユーザーに、LINEで高度にカスタマイズ可能なフレックスメッセージを送信する。 (important-comment)
     server.tool(
       "broadcast_flex_message",
       "Broadcast a highly customizable flex message via LINE to all users who have added your LINE Official Account. " +
