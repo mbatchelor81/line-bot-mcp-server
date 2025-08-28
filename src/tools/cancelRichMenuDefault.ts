@@ -12,6 +12,9 @@ export default class CancelRichMenuDefault extends AbstractTool {
   }
 
   register(server: McpServer) {
+    // Tool descriptions for README generation
+    // en: Cancel the default rich menu.
+    // ja: デフォルトのリッチメニューを解除する。
     server.tool(
       "cancel_rich_menu_default",
       "Cancel the default rich menu.",

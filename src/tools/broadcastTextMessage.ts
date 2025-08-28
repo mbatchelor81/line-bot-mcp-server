@@ -16,6 +16,9 @@ export default class BroadcastTextMessage extends AbstractTool {
   }
 
   register(server: McpServer) {
+    // Tool descriptions for README generation
+    // en: Broadcast a simple text message via LINE to all users who have followed your LINE Official Account. Use this for sending plain text messages without formatting. Please be aware that this message will be sent to all users.
+    // ja: LINE公式アカウントと友だちになっているすべてのユーザーに、LINEでシンプルなテキストメッセージを送信する。
     server.tool(
       "broadcast_text_message",
       "Broadcast a simple text message via LINE to all users who have followed your LINE Official Account. Use this for sending " +

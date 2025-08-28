@@ -11,57 +11,7 @@ LINE公式アカウントとAI Agentを接続するために、LINE Messaging AP
 
 ## Tools
 
-1. **broadcast_flex_message**
-   - LINE公式アカウントと友だちになっているすべてのユーザーに、LINEで高度にカスタマイズ可能なフレックスメッセージを送信する。 (important-comment)
-   - **入力:**
-     - `message` (object): The flex message content to send.
-
-2. **broadcast_text_message**
-   - LINE公式アカウントと友だちになっているすべてのユーザーに、LINEでシンプルなテキストメッセージを送信する。
-   - **入力:**
-     - `message` (object): The text message content to send.
-
-3. **cancel_rich_menu_default**
-   - デフォルトのリッチメニューを解除する。
-   - **入力:**
-     - なし
-
-4. **delete_rich_menu**
-   - LINE公式アカウントからリッチメニューを削除する。
-   - **入力:**
-     - `richMenuId` (string): The ID of the rich menu to delete.
-
-5. **get_message_quota**
-   - LINE公式アカウントのメッセージ容量と消費量を取得します。月間メッセージ制限と現在の使用量が表示されます。
-   - **入力:**
-     - なし
-
-6. **get_profile**
-   - LINEユーザーの詳細なプロフィール情報を取得する。表示名、プロフィール画像URL、ステータスメッセージ、言語を取得できる。
-   - **入力:**
-     - `userId` (string?): The user ID to get a profile. Defaults to DESTINATION_USER_ID.
-
-7. **get_rich_menu_list**
-   - LINE公式アカウントに登録されているリッチメニューの一覧を取得する。
-   - **入力:**
-     - なし
-
-8. **push_flex_message**
-   - LINEでユーザーに高度にカスタマイズ可能なフレックスメッセージを送信する。
-   - **入力:**
-     - `userId` (string?): The user ID to receive a message. Defaults to DESTINATION_USER_ID.
-     - `message` (object?): The user ID to receive a message. Defaults to DESTINATION_USER_ID.
-
-9. **push_text_message**
-   - LINEでユーザーにシンプルなテキストメッセージを送信する。
-   - **入力:**
-     - `userId` (string?): The user ID to receive a message. Defaults to DESTINATION_USER_ID.
-     - `message` (object?): The user ID to receive a message. Defaults to DESTINATION_USER_ID.
-
-10. **set_rich_menu_default**
-   - リッチメニューをデフォルトとして設定する。
-   - **入力:**
-     - `richMenuId` (string): The ID of the rich menu to set as default.
+{{TOOLS_SECTION}}
 
 ## インストール (npxを使用)
 

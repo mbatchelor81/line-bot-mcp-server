@@ -20,6 +20,9 @@ export default class DeleteRichMenu extends AbstractTool {
       .string()
       .describe("The ID of the rich menu to delete.");
 
+    // Tool descriptions for README generation
+    // en: Delete a rich menu from your LINE Official Account.
+    // ja: LINE公式アカウントからリッチメニューを削除する。
     server.tool(
       "delete_rich_menu",
       "Delete a rich menu from your LINE Official Account.",

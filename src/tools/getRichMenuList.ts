@@ -15,6 +15,9 @@ export default class GetRichMenuList extends AbstractTool {
   }
 
   register(server: McpServer) {
+    // Tool descriptions for README generation
+    // en: Get the list of rich menus associated with your LINE Official Account.
+    // ja: LINE公式アカウントに登録されているリッチメニューの一覧を取得する。
     server.tool(
       "get_rich_menu_list",
       "Get the list of rich menus associated with your LINE Official Account.",

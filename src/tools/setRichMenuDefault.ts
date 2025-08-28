@@ -17,6 +17,9 @@ export default class SetRichMenuDefault extends AbstractTool {
       .string()
       .describe("The ID of the rich menu to set as default.");
 
+    // Tool descriptions for README generation
+    // en: Set a rich menu as the default rich menu.
+    // ja: リッチメニューをデフォルトとして設定する。
     server.tool(
       "set_rich_menu_default",
       "Set a rich menu as the default rich menu.",

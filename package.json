@@ -19,7 +19,8 @@
     "format": "npm run prettier -- --write",
     "format:check": "npm run prettier -- -l",
     "clean": "rm -rf dist/*",
-    "prebuild": "npm run format:check && npm run clean",
+    "generate:readme": "tsx scripts/generate-readme.ts",
+    "prebuild": "npm run format:check && npm run generate:readme && npm run clean",
     "release": "npm run build && npm publish --provenance --access public"
   },
   "repository": {

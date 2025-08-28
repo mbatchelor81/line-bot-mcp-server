@@ -27,6 +27,9 @@ export default class PushFlexMessage extends AbstractTool {
         "The user ID to receive a message. Defaults to DESTINATION_USER_ID.",
       );
 
+    // Tool descriptions for README generation
+    // en: Push a highly customizable flex message to a user via LINE. Supports both bubble (single container) and carousel (multiple swipeable bubbles) layouts.
+    // ja: LINEでユーザーに高度にカスタマイズ可能なフレックスメッセージを送信する。
     server.tool(
       "push_flex_message",
       "Push a highly customizable flex message to a user via LINE. Supports both bubble (single container) and carousel " +
