@@ -146,13 +146,25 @@ function parseInputParam(key: string, value: string, fullContent: string): Input
     return parseFlexMessageSchema(key);
   }
   
-  const describeMatch = value.match(/\.describe\(\s*"([^"]*(?:\\.[^"]*)*)"\s*\)/g);
+  const describeMatches = value.match(/\.describe\(\s*"([^"]*(?:\\.[^"]*)*)"\s*\)/g);
   let description = "";
-  if (describeMatch) {
-    const lastDescribe = describeMatch[describeMatch.length - 1];
+  
+  if (describeMatches && describeMatches.length > 0) {
+    const lastDescribe = describeMatches[describeMatches.length - 1];
     const match = lastDescribe.match(/\.describe\(\s*"([^"]*(?:\\.[^"]*)*)"\s*\)/);
     if (match) {
       description = match[1].replace(/\\"/g, '"');
+    }
+  }
+  
+  if (!description && key) {
+    const schemaRegex = new RegExp(`const\\s+${key}Schema\\s*=[\\s\\S]*?\\.describe\\(\\s*"([^"]*(?:\\\\.[^"]*)*)"\\s*\\)`, 'g');
+    const schemaMatch = fullContent.match(schemaRegex);
+    if (schemaMatch) {
+      const descMatch = schemaMatch[0].match(/\.describe\(\s*"([^"]*(?:\\.[^"]*)*)"\s*\)/);
+      if (descMatch) {
+        description = descMatch[1].replace(/\\"/g, '"');
+      }
     }
   }
   

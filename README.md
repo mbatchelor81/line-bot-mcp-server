@@ -50,11 +50,11 @@
 8. **delete_rich_menu**
    - Delete a rich menu from your LINE Official Account.
    - **Inputs:**
-     - `richMenuId` (string): 
+     - `richMenuId` (string): The ID of the rich menu to delete.
 9. **set_rich_menu_default**
    - Set a rich menu as the default rich menu.
    - **Inputs:**
-     - `richMenuId` (string): 
+     - `richMenuId` (string): The ID of the rich menu to set as default.
 10. **cancel_rich_menu_default**
    - Cancel the default rich menu.
    - **Inputs:**
