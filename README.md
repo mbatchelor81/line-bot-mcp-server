@@ -14,31 +14,31 @@
 ## Tools
 
 1. **push_text_message**
-   - Push a simple text message to a user via LINE.
+   - Push a simple text message to a user via LINE. Use this for sending plain text messages without formatting.
    - **Inputs:**
-     - `user_id` (string?): The user ID to receive a message. Defaults to DESTINATION_USER_ID. Either `user_id` or `DESTINATION_USER_ID` must be set.
+     - `user_id` (string): The user ID to receive a message. Defaults to DESTINATION_USER_ID. Either `user_id` or `DESTINATION_USER_ID` must be set.
      - `message.text` (string): The plain text content to send to the user.
 2. **push_flex_message**
-   - Push a highly customizable flex message to a user via LINE.
+   - Push a highly customizable flex message to a user via LINE. Supports both bubble (single container) and carousel (multiple swipeable bubbles) layouts.
    - **Inputs:**
-     - `user_id` (string?): The user ID to receive a message. Defaults to DESTINATION_USER_ID. Either `user_id` or `DESTINATION_USER_ID` must be set.
+     - `user_id` (string): The user ID to receive a message. Defaults to DESTINATION_USER_ID. Either `user_id` or `DESTINATION_USER_ID` must be set.
      - `message.altText` (string): Alternative text shown when flex message cannot be displayed.
-     - `message.content` (any): The content of the flex message. This is a JSON object that defines the layout and components of the message.
+     - `message.contents` (object): The content of the flex message. This is a JSON object that defines the layout and components of the message.
      - `message.contents.type` (enum): Type of the container. 'bubble' for single container, 'carousel' for multiple swipeable bubbles.
 3. **broadcast_text_message**
-   - Broadcast a simple text message via LINE to all users who have followed your LINE Official Account.
+   - Broadcast a simple text message via LINE to all users who have followed your LINE Official Account. Use this for sending plain text messages without formatting. Please be aware that this message will be sent to all users.
    - **Inputs:**
-     - `message.text` (string): The plain text content to send to the users.
+     - `message.text` (string): The plain text content to send to the user.
 4. **broadcast_flex_message**
-   - Broadcast a highly customizable flex message via LINE to all users who have added your LINE Official Account.
+   - Broadcast a highly customizable flex message via LINE to all users who have added your LINE Official Account. this message will be sent to all users.
    - **Inputs:**
      - `message.altText` (string): Alternative text shown when flex message cannot be displayed.
-     - `message.content` (any): The content of the flex message. This is a JSON object that defines the layout and components of the message.
+     - `message.contents` (object): The content of the flex message. This is a JSON object that defines the layout and components of the message.
      - `message.contents.type` (enum): Type of the container. 'bubble' for single container, 'carousel' for multiple swipeable bubbles.
 5. **get_profile**
    - Get detailed profile information of a LINE user including display name, profile picture URL, status message and language.
    - **Inputs:**
-     - `user_id` (string?): The ID of the user whose profile you want to retrieve. Defaults to DESTINATION_USER_ID.
+     - `user_id` (string): The user ID to receive a message. Defaults to DESTINATION_USER_ID. Either `user_id` or `DESTINATION_USER_ID` must be set.
 6. **get_message_quota**
    - Get the message quota and consumption of the LINE Official Account. This shows the monthly message limit and current usage.
    - **Inputs:**
@@ -52,13 +52,13 @@
    - **Inputs:**
      - `richMenuId` (string): The ID of the rich menu to delete.
 9. **set_rich_menu_default**
-    - Set a rich menu as the default rich menu.
-    - **Inputs:**
-      - `richMenuId` (string): The ID of the rich menu to set as default.
+   - Set a rich menu as the default rich menu.
+   - **Inputs:**
+     - `richMenuId` (string): The ID of the rich menu to set as default.
 10. **cancel_rich_menu_default**
-    - Cancel the default rich menu.
-    - **Inputs:**
-      - None
+   - Cancel the default rich menu.
+   - **Inputs:**
+     - None
 
 ## Installation (Using npx)
 

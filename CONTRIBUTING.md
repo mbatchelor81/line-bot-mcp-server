@@ -30,7 +30,7 @@ The project structure is as follows:
 To add a new Tool, you can create a new file under `src/tools/` and
 implement the Tool in that file. The Tool should extend `AbstractTool`
 and should be registered in `src/index.ts`.
-Please remember to add the description of the tool to both README.md and README.ja.md.
+Tool descriptions in README.md and README.ja.md are automatically generated from the source code using `npm run generate:readme`.
 
 ### Run all CI tasks in your local
 
